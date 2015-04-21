@@ -12,11 +12,11 @@
 // limitations under the License.
 // 
 
-=  Configuration
+= Configuration
 
 :icons: font
 
-==  Files
+== Files
 
 Apache Karaf stores and loads all configuration in files located in the `etc` folder.
 
@@ -196,7 +196,6 @@ Properties:
    felix.fileinstall.filename = file:/opt/apache-karaf-3.0.0/etc/org.apache.karaf.log.cfg
 ----
 
-[icon="../../images/warning.png"]
 WARNING: Using the `pid` option, you bypass the configuration commit and rollback mechanism.f
 
 ===  `config:property-append`
@@ -234,7 +233,6 @@ Properties:
    felix.fileinstall.filename = file:/opt/apache-karaf-3.0.0/etc/org.apache.karaf.log.cfg
 ----
 
-[icon="../../images/warning.png"]
 WARNING:
 Using the `pid` option, you bypass the configuration commit and rollback mechanism.
 
