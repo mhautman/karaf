@@ -194,9 +194,8 @@ Properties:
    felix.fileinstall.filename = file:/opt/apache-karaf-3.0.0/etc/org.apache.karaf.log.cfg
 ----
 
-{warning}
-Using the `pid` option, you bypass the configuration commit and rollback mechanism.
-{warning}
+[icon="../images/warning.ico"]
+WARNING: Using the `pid` option, you bypass the configuration commit and rollback mechanism.
 
 ===  `config:property-append`
 
@@ -233,9 +232,9 @@ Properties:
    felix.fileinstall.filename = file:/opt/apache-karaf-3.0.0/etc/org.apache.karaf.log.cfg
 ----
 
-{warning}
+[icon="../images/warning.ico"]
+WARNING:
 Using the `pid` option, you bypass the configuration commit and rollback mechanism.
-{warning}
 
 ===  `config:property-delete`
 
