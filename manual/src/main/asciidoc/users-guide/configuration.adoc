@@ -11,13 +11,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 // 
-
 = Configuration
-
-++++
-<link rel="stylesheet"  href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/3.1.0/css/font-awesome.min.css">
-++++
-
 :icons: font
 
 == Files
@@ -200,7 +194,7 @@ Properties:
    felix.fileinstall.filename = file:/opt/apache-karaf-3.0.0/etc/org.apache.karaf.log.cfg
 ----
 
-WARNING: Using the `pid` option, you bypass the configuration commit and rollback mechanism.f
+WARNING: Using the `pid` option, you bypass the configuration commit and rollback mechanism.
 
 ===  `config:property-append`
 
@@ -237,8 +231,7 @@ Properties:
    felix.fileinstall.filename = file:/opt/apache-karaf-3.0.0/etc/org.apache.karaf.log.cfg
 ----
 
-WARNING:
-Using the `pid` option, you bypass the configuration commit and rollback mechanism.
+WARNING: Using the `pid` option, you bypass the configuration commit and rollback mechanism.
 
 ===  `config:property-delete`
 
