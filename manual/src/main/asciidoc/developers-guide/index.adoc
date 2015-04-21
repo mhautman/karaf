@@ -1,0 +1,42 @@
+= Developers Guide
+:icons: font
+
+// Push titles down one level
+:leveloffset: 1
+
+
+include::developer-commands.adoc[]
+
+include::scripting.adoc[]
+
+include::connect.adoc[]
+
+include::branding.adoc[]
+
+include::extending.adoc[]
+
+include::karaf-maven-plugin.adoc[]
+
+include::custom-distribution.adoc[]
+
+include::services.adoc[]
+
+include::creating-bundles.adoc[]
+
+include::blueprint.adoc[]
+
+include::cdi.adoc[]
+
+include::archetypes.adoc[]
+
+include::security-framework.adoc[]
+
+include::debugging.adoc[]
+
+include::writing-tests.adoc[]
+
+include::github-contributions.adoc[]
+
+
+// Return to normal title levels
+:leveloffset: 0
