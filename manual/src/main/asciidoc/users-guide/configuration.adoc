@@ -13,7 +13,6 @@
 // 
 
 = Configuration
-
 :icons: font
 
 == Files
