@@ -1,10 +1,10 @@
-h2. Goal {{karaf:kar}}
+== Goal _karaf:kar_
 
 Except in unusual circumstances, use the <packaging>kar</packaging> to run this goal.
 
-The {{karaf:kar}} goal assembles a KAR archive from a features XML descriptor file, normally generated in the same project with the {{karaf:features-generate-descriptor}} mojo.
+The _karaf:kar_ goal assembles a KAR archive from a features XML descriptor file, normally generated in the same project with the _karaf:features-generate-descriptor_ mojo.
 
-h2. kar layout
+== kar layout
 
 There are two important directories in a kar:
 repository/  contains a Maven structured repository of artifacts to be copied into the Karaf repository. The features descriptor and all the bundles mentioned in it are installed in this directory.
@@ -12,8 +12,9 @@ resources/ contains other resources to be copied over the Karaf installation.
 
 Everything in target/classes is copied into the kar.  Therefore resources you want installed into Karaf need to be in e.g. src/main/resources/resources.  This choice is so other resources such as legal files from the maven-remote-resources-plugin can be included under META-INF in the kar, without getting installed into Karaf.
 
-h3. Example
-{pygmentize:xml}
+=== Example
+[source,xml]
+----
 <project>
 ...
   <packaging>kar</packaging>
@@ -29,5 +30,4 @@ h3. Example
     </plugins>
   </build>
 </project>
-{pygmentize}
-
+----

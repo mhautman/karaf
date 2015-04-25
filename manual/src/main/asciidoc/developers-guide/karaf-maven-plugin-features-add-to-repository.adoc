@@ -1,14 +1,15 @@
-h2. Goal {{karaf:features-add-to-repository}}
+== Goal _karaf:features-add-to-repository_
 
 Consider using the karaf-assembly packaging which makes it easy to assemble a custom distribution in one step instead of this individual goal.
 
-The {{karaf:features-add-to-repository}} goal adds all the required bundles for a given set of features into directory.  You can use this goal to create a {{/system}} directory for building your own Karaf-based distribution.
+The _karaf:features-add-to-repository_ goal adds all the required bundles for a given set of features into directory.  You can use this goal to create a _/system_ directory for building your own Karaf-based distribution.
 
 By default, the Karaf core features descriptors (standard and enterprise) are automatically included in the descriptors set.
 
-h3. Example
-The example below copies the bundles for the {{spring}} and {{war}} features defined in the Karaf features XML descriptor into the {{target/features-repo}} directory.
-{pygmentize:xml}
+=== Example
+The example below copies the bundles for the _spring_ and _war_ features defined in the Karaf features XML descriptor into the _target/features-repo_ directory.
+[source,xml]
+----
 <project>
   <build>
     <plugins>
@@ -25,7 +26,7 @@ The example below copies the bundles for the {{spring}} and {{war}} features def
               <goal>features-add-to-repository</goal>
             </goals>
             <configuration>
-              <descriptors> 
+              <descriptors>
                 <descriptor>mvn:org.apache.karaf.features/standard/3.0.0/xml/features</descriptor>
                 <descriptor>mvn:my.groupid/my.artifactid/1.0.0/xml/features</descriptor>
               </descriptors>
@@ -42,11 +43,14 @@ The example below copies the bundles for the {{spring}} and {{war}} features def
     </plugins>
   </build>
 </project>
-{pygmentize}
+----
 
-h3. Parameters
-|| Name || Type || Description ||
-| {{descriptors}} | {{String[]}} | List of features XML descriptors where the features are defined |
-| {{features}} | {{String[]}} | List of features that bundles should be copied to the repository directory |
-| {{repository}} | {{File}} | The directory where the bundles will be copied by the plugin goal |
+=== Parameters
 
+[cols="1,1,5"]
+|===
+| Name | Type | Description
+| _descriptors_ | _String[]_ | List of features XML descriptors where the features are defined 
+| _features_ | _String[]_ | List of features that bundles should be copied to the repository directory
+| _repository_ | _File_ | The directory where the bundles will be copied by the plugin goal 
+|===

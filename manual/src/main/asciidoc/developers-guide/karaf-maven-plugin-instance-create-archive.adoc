@@ -1,14 +1,15 @@
-h2. Goal {{karaf:archive}}
+== Goal _karaf:archive_
 
 Normally this is run as part of the karaf-assembly packaging.
 
-The {{karaf:archive}} goal packages a Karaf instance archive from a given assembled instance.
+The _karaf:archive_ goal packages a Karaf instance archive from a given assembled instance.
 
 Both tar.gz and zip formats are generated in the destination folder.
 
-h3. Example
+=== Example
 The example below create archives for the given Karaf instance:
-{pygmentize:xml}
+[source,xml]
+----
 <project>
   <build>
     <plugins>
@@ -34,10 +35,13 @@ The example below create archives for the given Karaf instance:
     </plugins>
   </build>
 </project>
-{pygmentize}
+----
 
-h3. Parameters
-|| Name || Type || Description ||
-| {{destDir}} | {{File}} | The target directory of the project. \\ Default value: ${project.build.directory} |
-| {{targetServerDirectory}} | {{File}} | The location of the server repository. \\ Default value: ${project.build.directory}/assembly |
-| {{targetFile}} | {{File}} | The target file to set as the project's artifact. \\ Default value: ${project.file} |
+=== Parameters
+[cols="1,1,5"]
+|===
+| Name | Type | Description 
+| _destDir_ | _File_ | The target directory of the project. \\ Default value: ${project.build.directory} 
+| _targetServerDirectory_ | _File_ | The location of the server repository. \\ Default value: ${project.build.directory}/assembly 
+| _targetFile_ | _File_ | The target file to set as the project's artifact. \\ Default value: ${project.file} 
+|===

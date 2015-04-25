@@ -558,6 +558,7 @@
 										<toc />
 										<linkcss>false</linkcss>
 										<doctype>book</doctype>
+										<docVersion>${project.version}</docVersion>
 									</attributes>
 								</configuration>
 							</execution>

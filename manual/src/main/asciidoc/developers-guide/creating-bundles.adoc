@@ -1,13 +1,15 @@
-= Basic bundle creation using the Felix maven-bundle-plugin
+= Bundle creation
+
+== Basic bundle creation using the Felix maven-bundle-plugin
 
 Create a bundle instead of a normal jar by using a pom file like this:
 
 [source,xml]
 ----
-<?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<?xml version=="1.0" encoding=="UTF-8"?>
+<project xmlns=="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi=="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation=="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
     <modelVersion>4.0.0</modelVersion>
 
@@ -46,20 +48,20 @@ Create a bundle instead of a normal jar by using a pom file like this:
 </project>
 ----
 
-== Add extended information to bundles
+=== Add extended information to bundles
 
 Karaf supports a OSGI-INF/bundle.info file in a bundle. This file is extended description of the bundle. It supports ASCII character declarations (for adding color, formatting, etc) and some simple Wiki syntax.
 
 Simply add a src/main/resources/OSGI-INF/bundle.info file containing, for instance:
 
 ----
-= SYNOPSIS
+== SYNOPSIS
     ${project.description}
 
-= DESCRIPTION
+== DESCRIPTION
     Long description of your bundle, including usage, etc.
 
-= SEE ALSO
+== SEE ALSO
     [http://yourside\]
     [http://yourside/docs\]
 ----
@@ -70,19 +72,19 @@ You can display this extended information using:
 root@karaf> bundles:info
 ----
 
-== Wiki Syntax
+=== Wiki Syntax
 
 Karaf supports some simple wiki syntax in bunde info files:
 ----
-=, ==, ... : Headings
+==, ====, ... : Headings
 * : Enumerations
 [http://....] : links
 ----
 
-= Creating bundles for non OSGi third party dependencies
+== Creating bundles for non OSGi third party dependencies
 
 
-== Dynamically wrapping jars
+=== Dynamically wrapping jars
 
 Karaf supports the wrap: protocol execution.
 
@@ -96,15 +98,15 @@ The wrap protocol creates a bundle dynamically using the bnd. Confiugurations ca
 
 from the shell
 ----
-root@karaf> bundles:install 'wrap:mvn:commons-lang/commons-lang/2.4$Bundle-SymbolicName=commons-lang&Bundle-Version=2.4'
+root@karaf> bundles:install 'wrap:mvn:commons-lang/commons-lang/2.4$Bundle-SymbolicName==commons-lang&Bundle-Version==2.4'
 ----
 
 from features.xml
 ----
-<bundle>wrap:mvn:commons-lang/commons-lang/2.4$Bundle-SymbolicName=commons-lang&amp;Bundle-Version=2.4</bundle>
+<bundle>wrap:mvn:commons-lang/commons-lang/2.4$Bundle-SymbolicName==commons-lang&amp;Bundle-Version==2.4</bundle>
 ----
 
-== Statically bundling jars
+=== Statically bundling jars
 
 You can also create a wrap bundle for a third party dependency.
 This bundle is simply a Maven POM that shades an existing jar and package into a jar bundle.
@@ -113,10 +115,10 @@ For instance, to create an OSGi bundle that wraps Apache Commons Lang, simply de
 
 [source,xml]
 ----
-<?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<?xml version=="1.0" encoding=="UTF-8"?>
+<project xmlns=="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi=="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation=="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
     <modelVersion>4.0.0</modelVersion>
 
@@ -179,7 +181,7 @@ For instance, to create an OSGi bundle that wraps Apache Commons Lang, simply de
                     <Bundle-SymbolicName>${project.artifactId}</Bundle-SymbolicName>
                     <Export-Package></Export-Package>
                     <Import-Package></Import-Package>
-                    <_versionpolicy>[$(version;==;$(@)),$(version;+;$(@)))</_versionpolicy>
+                    <_versionpolicy>[$(version;====;$(@)),$(version;+;$(@)))</_versionpolicy>
                     <_removeheaders>Ignore-Package,Include-Resource,Private-Package,Embed-Dependency</_removeheaders>
                 </instructions>
                 <unpackBundle>true</unpackBundle>

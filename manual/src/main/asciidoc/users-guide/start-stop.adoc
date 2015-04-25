@@ -11,8 +11,9 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 // 
-
 =  Start, stop, restart, connect
+
+This section will talk about starting,stopping,restarting and connecting to Apache Karaf.
 
 ==  Start
 

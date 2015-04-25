@@ -48,7 +48,7 @@ By default, the Apache Karaf WebContainer port number is `8181`.
 
 It means that the Apache Karaf WebConsole is accessible on the following URL:
 
-[http://localhost:8181/system/console]
+http://localhost:8181/system/console
 
 As the Apache Karaf WebConsole uses the security framework, an username and password will be prompted.
 
