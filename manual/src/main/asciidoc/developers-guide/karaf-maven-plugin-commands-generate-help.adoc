@@ -1,13 +1,28 @@
-h2. Goal {{karaf:commands-generate-help}}
+// 
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+// 
+//      http://www.apache.org/licenses/LICENSE-2.0
+// 
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+// 
 
-The {{karaf:commands-generate-help}} goal generates documentation containing Karaf commands help.
+== Goal _karaf:commands-generate-help_
+
+The _karaf:commands-generate-help_ goal generates documentation containing Karaf commands help.
 
 It looks for Karaf commands in the current project class loader and generates the help as displayed with the --help
 option in the Karaf shell console.
 
-h3. Example
+=== Example
 The example below generates help for the commands in the current project:
-{pygmentize:xml}
+[source,xml]
+----
 <project>
   <build>
     <plugins>
@@ -32,10 +47,12 @@ The example below generates help for the commands in the current project:
     </plugins>
   </build>
 </project>
-{pygmentize}
+----
 
-h3. Parameters
-| Name || Type || Description ||
-| {{targetFolder}} | {{File}} | The directory where the documentation output files are to be generated \\ Default value: ${project.build.directory}/docbkx/sources |
-| {{format}} | {{String}} | The output format (docbx or conf) of the commands documentation. \\ Default value: docbx |
-| {{classLoader}} | {{String}} | The class loader to use in loading the commands. \\ Default value: ${project} |
+=== Parameters
+
+|=== 
+|Name | Type | Description
+| {{targetFolder}} | {{File}} | The directory where the documentation output files are to be generated \\ Default value: ${project.build.directory}/docbkx/sources 
+| {{format}} | {{String}} | The output format (docbx or conf) of the commands documentation. \\ Default value: docbx 
+| {{classLoader}} | {{String}} | The class loader to use in loading the commands. \\ Default value: ${project} 
