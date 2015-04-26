@@ -548,9 +548,9 @@
 							<execution>
 								<id>output-html</id>
 								<phase>generate-resources</phase>
-								<goals>
-									<goal>process-asciidoc</goal>
-								</goals>
+									<goals>
+										<goal>process-asciidoc</goal>
+									</goals>
 								<configuration>
 									<sourceHighlighter>coderay</sourceHighlighter>
 									<backend>html5</backend>
@@ -565,6 +565,7 @@
 						</executions>
 						<configuration>
 							<sourceDirectory>src/main/asciidoc</sourceDirectory>
+							<outputDirectory>target/docs</outputDirectory>
 							<headerFooter>true</headerFooter>
 							<imagesDir>../resources/images</imagesDir>
 						</configuration>
