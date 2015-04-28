@@ -92,7 +92,7 @@ Karaf supports some simple wiki syntax in bunde info files:
 ----
 ==, ====, ... : Headings
 * : Enumerations
-[http://....] : links
+http://.... : links
 ----
 
 == Creating bundles for non OSGi third party dependencies

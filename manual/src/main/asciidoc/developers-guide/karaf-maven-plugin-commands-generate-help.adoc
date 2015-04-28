@@ -50,9 +50,9 @@ The example below generates help for the commands in the current project:
 ----
 
 === Parameters
-
-|=== 
-|Name | Type | Description
-| {{targetFolder}} | {{File}} | The directory where the documentation output files are to be generated \\ Default value: ${project.build.directory}/docbkx/sources 
-| {{format}} | {{String}} | The output format (docbx or conf) of the commands documentation. \\ Default value: docbx 
-| {{classLoader}} | {{String}} | The class loader to use in loading the commands. \\ Default value: ${project} 
+|===
+|Name | Type | Description 
+| _targetFolder_ | _File_ | The directory where the documentation output files are to be generated \\ Default value: ${project.build.directory}/docbkx/sources 
+| _format_ | _String_ | The output format (docbx or conf) of the commands documentation. \\ Default value: docbx 
+| _classLoader_ | _String_ | The class loader to use in loading the commands. \\ Default value: ${project} 
+|===
