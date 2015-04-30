@@ -222,9 +222,7 @@ launchctl remove org.apache.karaf.KARAF
 
 When using scripts in the Apache Karaf `bin` folder, you can using `bin/setenv` Unix script (`bin\setenv.bat` on Windows) as described in the [Start, stop, restart, connect|start-stop] section of the documentation.
 
-{warning:title=Warning}
-The `bin/setenv` Unix script (`bin\setenv.bat` on Windows) is not used by the Apache Karaf Service Wrapper.
-{warning}
+WARNING: The `bin/setenv` Unix script (`bin\setenv.bat` on Windows) is not used by the Apache Karaf Service Wrapper.
 
 To configure Apache Karaf started by the Service Wrapper, you have to tune the `etc/karaf-wrapper.conf` file. If you provided the `name` option to the `wrapper:install` command, the file is `etc/karaf-yourname.conf`.
 
