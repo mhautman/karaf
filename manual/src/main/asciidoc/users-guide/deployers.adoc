@@ -16,7 +16,7 @@
 
 The following picture describes the architecture of the deployers.
 
-image::../images/deployer.png[]
+image::deployer.png[]
 
 Apache Karaf polls the `deploy` folder for new files.
 

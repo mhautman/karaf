@@ -137,7 +137,7 @@ Karaf uses JMX for monitoring and management of all Karaf components.
 The JMX connection could be:
 * local using the process id
 
-image::../images/jconsole_connect.jpg[]
+image::jconsole_connect.jpg[]
 
 * remote using the _rmiRegistryPort_ property defined in _etc/org.apache.karaf.management.cfg_ file.
 
@@ -145,25 +145,25 @@ Using JMX, you can have a clean overview of the running Karaf instance:
 
 * A overview with graphics displaying the load in terms of thread, heap/GC, etc:
 
-image::../images/jconsole_overview.jpg[]
+image::jconsole_overview.jpg[]
 
 * A thread overview:
 
-image::../images/jconsole_threads.jpg[]
+image::jconsole_threads.jpg[]
 
 * A memory heap consumption, including "Perform GC" button:
 
-image::../images/jconsole_memory.jpg[]
+image::jconsole_memory.jpg[]
 
 * A complete JVM summary, with all number of threads, etc:
 
-image::../images/jconsole_summary.jpg[]
+image::jconsole_summary.jpg[]
 
 You can manage Karaf features like you are in the shell. For example, you have access to the Admin service MBean,
 allowing you to create, rename, destroy, change SSH port, etc. Karaf instances:
 
-image::../images/jconsole_admin.jpg[]
+image::jconsole_admin.jpg[]
 
 You can also manage Karaf features MBean to list, install, and uninstall Karaf features:
 
-image::../images/jconsole_features.jpg[]
+image::jconsole_features.jpg[]

@@ -16,9 +16,9 @@
 
 This project contains documentation about Apache Karaf.
 
-* link:overview[Karaf Overview]
-* link:update-notes[Update Notes]
-* link:quick-start[Quick Start]
-* link:users-guide/index[Users Guide]
-* link:developers-guide/index[Developers Guide]
-* link:commands/commands[Commands Reference]
+* link:overview.adoc[Karaf Overview]
+* link:update-notes.adoc[Update Notes]
+* link:quick-start.adoc[Quick Start]
+* link:users-guide/index.adoc[Users Guide]
+* link:developers-guide/index.adoc[Developers Guide]
+* link:commands/commands.adoc[Commands Reference]
