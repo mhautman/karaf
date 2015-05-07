@@ -37,7 +37,7 @@ import org.apache.karaf.shell.impl.action.command.HelpOption;
 /**
  * Prints documentation in wiki syntax
  */
-public class UserConfCommandHelpPrinter extends AbstractCommandHelpPrinter {
+public class UserConfCommandHelpPrinterAsciidoc extends AbstractCommandHelpPrinter {
 
     @Override
     public void printHelp(Action action, PrintStream out, boolean includeHelpOption) {
@@ -146,7 +146,7 @@ public class UserConfCommandHelpPrinter extends AbstractCommandHelpPrinter {
             writer.println("== " + key);
             writer.println();
             for (String cmd : commands.get(key)) {
-                writer.println("* link:" + key + "\"-\"" + cmd + "[" key + ":" + cmd "]");
+                writer.println("* link:" + key + "\"-\"" + cmd + "["+ key + ":" + cmd +"]");
             }
             writer.println();
         }

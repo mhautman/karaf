@@ -24,7 +24,7 @@ Apache Software Foundation
 :icons: font
 :leveloffset: 1
 
-image::/images/karaf-logo.png[]
+image::karaf-logo.png[]
 
 Copyright 2008-2015 The Apache Software Foundation
 
