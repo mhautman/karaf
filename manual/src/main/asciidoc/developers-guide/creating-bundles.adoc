@@ -20,10 +20,10 @@ Create a bundle instead of a normal jar by using a pom file like this:
 
 [source,xml]
 ----
-<?xml version=="1.0" encoding=="UTF-8"?>
-<project xmlns=="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi=="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation=="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
     <modelVersion>4.0.0</modelVersion>
 
@@ -69,13 +69,13 @@ Karaf supports a OSGI-INF/bundle.info file in a bundle. This file is extended de
 Simply add a src/main/resources/OSGI-INF/bundle.info file containing, for instance:
 
 ----
-== SYNOPSIS
+= SYNOPSIS
     ${project.description}
 
-== DESCRIPTION
+= DESCRIPTION
     Long description of your bundle, including usage, etc.
 
-== SEE ALSO
+= SEE ALSO
     [http://yourside\]
     [http://yourside/docs\]
 ----
@@ -90,7 +90,7 @@ root@karaf> bundles:info
 
 Karaf supports some simple wiki syntax in bunde info files:
 ----
-==, ====, ... : Headings
+=, ==, ... : Headings
 * : Enumerations
 http://.... : links
 ----
@@ -112,12 +112,12 @@ The wrap protocol creates a bundle dynamically using the bnd. Confiugurations ca
 
 from the shell
 ----
-root@karaf> bundles:install 'wrap:mvn:commons-lang/commons-lang/2.4$Bundle-SymbolicName==commons-lang&Bundle-Version==2.4'
+root@karaf> bundles:install 'wrap:mvn:commons-lang/commons-lang/2.4$Bundle-SymbolicName=commons-lang&Bundle-Version=2.4'
 ----
 
 from features.xml
 ----
-<bundle>wrap:mvn:commons-lang/commons-lang/2.4$Bundle-SymbolicName==commons-lang&amp;Bundle-Version==2.4</bundle>
+<bundle>wrap:mvn:commons-lang/commons-lang/2.4$Bundle-SymbolicName=commons-lang&amp;Bundle-Version=2.4</bundle>
 ----
 
 === Statically bundling jars
@@ -129,10 +129,10 @@ For instance, to create an OSGi bundle that wraps Apache Commons Lang, simply de
 
 [source,xml]
 ----
-<?xml version=="1.0" encoding=="UTF-8"?>
-<project xmlns=="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi=="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation=="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
     <modelVersion>4.0.0</modelVersion>
 
@@ -195,7 +195,7 @@ For instance, to create an OSGi bundle that wraps Apache Commons Lang, simply de
                     <Bundle-SymbolicName>${project.artifactId}</Bundle-SymbolicName>
                     <Export-Package></Export-Package>
                     <Import-Package></Import-Package>
-                    <_versionpolicy>[$(version;====;$(@)),$(version;+;$(@)))</_versionpolicy>
+                    <_versionpolicy>[$(version;==;$(@)),$(version;+;$(@)))</_versionpolicy>
                     <_removeheaders>Ignore-Package,Include-Resource,Private-Package,Embed-Dependency</_removeheaders>
                 </instructions>
                 <unpackBundle>true</unpackBundle>
