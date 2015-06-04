@@ -138,6 +138,19 @@ The start-level attribute insure that the `myproject-dao` bundle is started befo
 Instead of using start-level, a better solution is to simply let the OSGi framework know what your dependencies are by
 defining the packages or services you need. It is more robust than setting start levels.
 
+==== Start level inheritance
+
+[source,xml]
+
+It is possible to define a start-level on a feature , this will be also applied to all the bundles in the feature. 
+Unless you override it on the bundle, like the first bundle defined beneath.
+----
+  <feature name="my-project" version="1.0.0" start-level="90">
+    <bundle start-level="80">mvn:com.mycompany.myproject/myproject-dao</bundle>
+    <bundle>mvn:com.mycompany.myproject/myproject-service</bundle>
+  </feature>
+----
+
 ===  Start and stop
 
 You can install a bundle without starting it. By default, the bundles in a feature are automatically started.

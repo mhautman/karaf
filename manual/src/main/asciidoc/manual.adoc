@@ -68,22 +68,6 @@ include::users-guide/obr.adoc[]
 
 include::users-guide/enterprise.adoc[]
 
-include::users-guide/webcontainer.adoc[]
-
-include::users-guide/jndi.adoc[]
-
-include::users-guide/jta.adoc[]
-
-include::users-guide/jms.adoc[]
-
-include::users-guide/jpa.adoc[]
-
-include::users-guide/ejb.adoc[]
-
-include::users-guide/cdi.adoc[]
-
-include::users-guide/failover.adoc[]
-
 include::users-guide/monitoring.adoc[]
 
 include::users-guide/webconsole.adoc[]
